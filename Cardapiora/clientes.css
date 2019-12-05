@@ -1,0 +1,227 @@
+.container{
+    padding: 50px;
+}
+
+nav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: #333;
+  }
+  
+  nav > a {
+    text-decoration: none;
+    color: #ff675c;
+    font-weight: 700;
+    font-size: 28px;
+    font-family: Pacifico, serif;
+    margin-bottom: 2px;
+  }
+
+
+  .apresenta {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+
+  }
+ 
+
+  .album-fotos .fotos {
+    display: flex;
+    flex-flow: column;
+    
+    text-align: center;
+    margin-top: 30px;
+
+  }
+
+
+  li{
+  float:left;/*faz com que cada conteúdo fique a esquerda do outro um ao lado do outro*/
+  width: 200px;
+  height: 200px;
+  margin: 25px;
+  border: 3px solid white;
+ 
+  box-shadow: 1px 1px 3px rgba(0,0,0, 0.6);/*sombra atras do box*/
+  transition: 0.7s all ease-in; /*resultou na velocidade de ampliação do zoom de cada foto*/
+}
+
+ li#foto01{
+ background-image:linear-gradient(to bottom, 
+    rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url(./_imagens/modelo.jpg);
+ background-repeat: no-repeat;
+ background-position: 50% 50%;/*posicionamento da imagem*/
+  background-size: 400px 400px; /*tamanho da imagem de fundo*/
+ 
+}
+li#foto02{
+ background-image:linear-gradient(to bottom, 
+    rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url(./_imagens/atualizado.jpg);
+ background-repeat: no-repeat;
+  background-position: 50% 50%;/*posicionamento da imagem*/
+  background-size: 400px 400px; /*tamanho da imagem de fundo*/
+ 
+}
+
+ li#foto03{
+ background-image:linear-gradient(to bottom, 
+    rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url(./_imagens/exclusivo.jpg);
+ background-repeat: no-repeat;
+  background-position: 50% 50%;/*posicionamento da imagem*/
+  background-size: 400px 400px; /*tamanho da imagem de fundo*/
+
+} 
+
+ li#foto04{
+ background-image:linear-gradient(to bottom, 
+    rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url(./_imagens/organizacao.png);
+ background-repeat: no-repeat;
+  background-position: 50% 50%;/*posicionamento da imagem*/
+  background-size: 400px 400px; /*tamanho da imagem de fundo*/
+  
+} 
+
+ li#foto05{
+ background-image:linear-gradient(to bottom, 
+    rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url(./_imagens/suporte.png);
+ background-repeat: no-repeat;
+  background-position: 50% 50%;/*posicionamento da imagem*/
+  background-size: 400px 400px; /*tamanho da imagem de fundo*/
+  
+} 
+
+ li#foto06{
+ background-image:linear-gradient(to bottom, 
+    rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url(./_imagens/usocomercial.jpg) ;
+ background-repeat: no-repeat;
+  background-position: 50% 50%;/*posicionamento da imagem*/
+  background-size: 400px 400px; /*tamanho da imagem de fundo*/
+
+} 
+
+
+
+ li#foto01:hover {
+  background-position: 0px 0px; /*volta a mostrar a parte de cima da tela*/
+  background-size:210px 210px;/*vai voltar para para 200pixels por 200pixels*/
+
+}
+
+ li#foto02:hover {
+  background-position: 0px 0px;
+  background-size:210px 210px;
+
+}
+
+ li#foto03:hover{
+  background-position: 0px 0px;
+  background-size:210px 210px;
+}
+
+ li#foto04:hover {
+  background-position: 0px 0px;
+  background-size:210px 210px;
+}
+
+ li#foto05:hover{
+  background-position: 0px 0px;
+  background-size:210px 210px;
+}
+
+ li#foto06:hover {
+  background-position: 0px 0px;
+  background-size:210px 210px;
+}
+
+
+
+/*dando um zoom(ampliar) em cada box, ele fica em 3d. Mas antes deve inserir a foto e inserir a diminuição da foto no box*/
+ li:hover{
+  transform: scale(1.5); /*resultou no zoom de cada imagem*/
+}
+
+
+
+
+/*formatação das legendas do LI*/
+ li span{
+  opacity: 1; /*nivel do quanto a legenda ira aparecer na imagem*/
+  color:white;
+  text-shadow: 1px 1px 1px #000000;/*sombra nas palavras*/
+  background-color: rgba(0,0,0,.3);
+  font-size: 15pt;
+  line-height: 180px;/*fez com que a legenda decesse*/
+  padding: 5px;/*largura do background do fundo da legenda*/
+}
+
+ li p{
+  opacity: 1; /*nivel do quanto a legenda ira aparecer na imagem*/
+color: white;
+  text-shadow: 1px 1px 1px black;/*sombra nas palavras*/
+  font-size: 15px;
+  
+  padding: 5px;/*largura do background do fundo da legenda*/
+}
+
+li:hover span{
+  opacity: 1;
+}
+
+#album-fotos {
+  width: 790px;
+  
+  padding: 50px;
+  overflow: hidden;/*faz com que o conteúdo excedido não fique visivel*/
+  list-style:none;/*retira as bolinhas da lista*/
+  margin-top: -17px;
+  box-shadow: 1px 1px 3px rgba(0,0,0, 0.6);
+  
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+  
+}
+
+  @media screen and (min-width: 768px) {
+    /*
+    NAVEGAÇÃO
+    */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+
+    #album-fotos {
+      flex-direction: row;
+      flex-wrap: wrap;
+       min-width: 300px;
+      margin: 0 auto;
+
+
+    }
+    
+    #album-fotos .fotos{
+      flex: 1 1 150px;
+      padding: 0 10px;
+    }
+    
+
+    .apresenta h2 {
+      text-align: center;
+      width: 100%;
+      
+    }
+    
+    
+    }
